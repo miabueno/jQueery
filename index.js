@@ -43,6 +43,29 @@ $(document).keydown(function(event) {
 });
 
 // using "on" to add event listeners
+// when mouse hovers over element, changes colour
 $("h1").on("mouseover", function() {
     $("h1").css("color", "aqua");
 });
+
+
+// -----------------------------------------------
+// Section 14 - Adding + Removing Elements with jQuery
+// -----------------------------------------------
+
+var newButton = "<button>new</button>";
+
+// <button> new </button> <h1> Hello </h1>
+$("h1").before(newButton);
+
+// <h1> Hello </h1>
+$("h1").after(newButton);
+
+//<h1> <button> new </button> Hello </h1>
+$("h1").prepend(newButton);
+
+// <h1> Hello <button> new </button> </h1>
+$("h1").append(newButton);
+
+// REMOVE - all button Elements
+//$("button").remove();
