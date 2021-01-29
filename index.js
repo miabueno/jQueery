@@ -45,7 +45,7 @@ $(document).keydown(function(event) {
 // using "on" to add event listeners
 // when mouse hovers over element, changes colour
 $("h1").on("mouseover", function() {
-    $("h1").css("color", "aqua");
+    $("h1").css("color", "blue");
 });
 
 
@@ -69,3 +69,28 @@ $("h1").append(newButton);
 
 // REMOVE - all button Elements
 //$("button").remove();
+
+// -----------------------------------------------
+// Section 14 - Web Animations with jQuery
+// -----------------------------------------------
+
+// on click of button --> h1 hides / re-appears
+// pre-built animation features
+/*
+$("button").on("click", function() {
+    // toggle
+    // fadeOut
+    // fadeToggle
+    $("h1").slideToggle();
+});
+*/
+
+// on click --> slide up, slide down and animate opacity to 50%
+$("button").on("click", function() {
+    $("h1").slideUp().slideDown().animate({opacity:0.5});
+});
+
+//-------
+//  More jQuery effect methods here 
+// https://www.w3schools.com/jquery/jquery_ref_effects.asp
+//-------
